@@ -17,7 +17,6 @@
       <Configuration>Release</Configuration>
       <Platform>x64</Platform>
     </ProjectConfiguration>
-
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
@@ -53,27 +52,28 @@
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
-
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
   </ImportGroup>
-  <ImportGroup Label="Shared" >
+  <ImportGroup Label="Shared">
   </ImportGroup>
-    <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-      <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    </ImportGroup>
-    <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-      <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    </ImportGroup>
-    <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-      <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    </ImportGroup>
-    <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-      <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    </ImportGroup>
-
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
   <PropertyGroup Label="UserMacros" />
-
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <IncludePath>C:\fh\gdv\glEngine\glEngine\dependencies\include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\fh\gdv\glEngine\glEngine\dependencies\libs;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
@@ -112,6 +112,7 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>assimp-vc143-mtd.lib;glfw3.lib;opengl32.lib;$(CoreLibraryDependencies);%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -130,8 +131,110 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
   </ItemDefinitionGroup>
-
-  <ItemGroup></ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\barebone_engine\barebone_engine\core\application.cpp" />
+    <ClCompile Include="..\..\barebone_engine\barebone_engine\core\gamelogic.cpp" />
+    <ClCompile Include="..\..\barebone_engine\barebone_engine\core\modelmanager.cpp" />
+    <ClCompile Include="..\..\barebone_engine\barebone_engine\core\renderer.cpp" />
+    <ClCompile Include="..\..\barebone_engine\barebone_engine\core\ressourcemanager.cpp" />
+    <ClCompile Include="..\..\barebone_engine\barebone_engine\core\scene.cpp" />
+    <ClCompile Include="..\..\barebone_engine\barebone_engine\gl.c" />
+    <ClCompile Include="..\..\barebone_engine\barebone_engine\main.cpp" />
+    <ClCompile Include="..\..\barebone_engine\barebone_engine\utils\benchmark.cpp" />
+    <ClCompile Include="..\..\barebone_engine\barebone_engine\utils\camera.cpp" />
+    <ClCompile Include="..\..\barebone_engine\barebone_engine\utils\camera_freefloat.cpp" />
+    <ClCompile Include="..\..\barebone_engine\barebone_engine\utils\camera_isometric.cpp" />
+    <ClCompile Include="..\..\barebone_engine\barebone_engine\utils\collision_detection.cpp" />
+    <ClCompile Include="..\..\barebone_engine\barebone_engine\utils\cooldown.cpp" />
+    <ClCompile Include="..\..\barebone_engine\barebone_engine\utils\dataprovider.cpp" />
+    <ClCompile Include="..\..\barebone_engine\barebone_engine\utils\debug.cpp" />
+    <ClCompile Include="..\..\barebone_engine\barebone_engine\utils\ebo.cpp" />
+    <ClCompile Include="..\..\barebone_engine\barebone_engine\utils\framebuffer.cpp" />
+    <ClCompile Include="..\..\barebone_engine\barebone_engine\utils\helpers.cpp" />
+    <ClCompile Include="..\..\barebone_engine\barebone_engine\utils\imgui\imgui.cpp" />
+    <ClCompile Include="..\..\barebone_engine\barebone_engine\utils\imgui\imgui_demo.cpp" />
+    <ClCompile Include="..\..\barebone_engine\barebone_engine\utils\imgui\imgui_draw.cpp" />
+    <ClCompile Include="..\..\barebone_engine\barebone_engine\utils\imgui\imgui_impl_glfw.cpp" />
+    <ClCompile Include="..\..\barebone_engine\barebone_engine\utils\imgui\imgui_impl_opengl3.cpp" />
+    <ClCompile Include="..\..\barebone_engine\barebone_engine\utils\imgui\imgui_tables.cpp" />
+    <ClCompile Include="..\..\barebone_engine\barebone_engine\utils\imgui\imgui_widgets.cpp" />
+    <ClCompile Include="..\..\barebone_engine\barebone_engine\utils\mesh.cpp" />
+    <ClCompile Include="..\..\barebone_engine\barebone_engine\utils\model.cpp" />
+    <ClCompile Include="..\..\barebone_engine\barebone_engine\utils\modelloader.cpp" />
+    <ClCompile Include="..\..\barebone_engine\barebone_engine\utils\texture.cpp" />
+    <ClCompile Include="..\..\barebone_engine\barebone_engine\utils\texture_2d.cpp" />
+    <ClCompile Include="..\..\barebone_engine\barebone_engine\utils\texture_cubemap.cpp" />
+    <ClCompile Include="..\..\barebone_engine\barebone_engine\utils\texture_rendertarget.cpp" />
+    <ClCompile Include="..\..\barebone_engine\barebone_engine\utils\vao.cpp" />
+    <ClCompile Include="..\..\barebone_engine\barebone_engine\utils\vbo.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\barebone_engine\barebone_engine\core\application.h" />
+    <ClInclude Include="..\..\barebone_engine\barebone_engine\core\gamelogic.h" />
+    <ClInclude Include="..\..\barebone_engine\barebone_engine\core\gamesettings.h" />
+    <ClInclude Include="..\..\barebone_engine\barebone_engine\core\modelmanager.h" />
+    <ClInclude Include="..\..\barebone_engine\barebone_engine\core\renderer.h" />
+    <ClInclude Include="..\..\barebone_engine\barebone_engine\core\ressourcemanager.h" />
+    <ClInclude Include="..\..\barebone_engine\barebone_engine\core\scene.h" />
+    <ClInclude Include="..\..\barebone_engine\barebone_engine\utils\benchmark.h" />
+    <ClInclude Include="..\..\barebone_engine\barebone_engine\utils\camera.h" />
+    <ClInclude Include="..\..\barebone_engine\barebone_engine\utils\camera_freefloat.h" />
+    <ClInclude Include="..\..\barebone_engine\barebone_engine\utils\camera_isometric.h" />
+    <ClInclude Include="..\..\barebone_engine\barebone_engine\utils\collision_detection.h" />
+    <ClInclude Include="..\..\barebone_engine\barebone_engine\utils\cooldown.h" />
+    <ClInclude Include="..\..\barebone_engine\barebone_engine\utils\dataprovider.h" />
+    <ClInclude Include="..\..\barebone_engine\barebone_engine\utils\debug.h" />
+    <ClInclude Include="..\..\barebone_engine\barebone_engine\utils\definitions.h" />
+    <ClInclude Include="..\..\barebone_engine\barebone_engine\utils\ebo.h" />
+    <ClInclude Include="..\..\barebone_engine\barebone_engine\utils\framebuffer.h" />
+    <ClInclude Include="..\..\barebone_engine\barebone_engine\utils\helpers.h" />
+    <ClInclude Include="..\..\barebone_engine\barebone_engine\utils\imgui\imconfig.h" />
+    <ClInclude Include="..\..\barebone_engine\barebone_engine\utils\imgui\imgui.h" />
+    <ClInclude Include="..\..\barebone_engine\barebone_engine\utils\imgui\imgui_impl_glfw.h" />
+    <ClInclude Include="..\..\barebone_engine\barebone_engine\utils\imgui\imgui_impl_opengl3.h" />
+    <ClInclude Include="..\..\barebone_engine\barebone_engine\utils\imgui\imgui_impl_opengl3_loader.h" />
+    <ClInclude Include="..\..\barebone_engine\barebone_engine\utils\imgui\imgui_internal.h" />
+    <ClInclude Include="..\..\barebone_engine\barebone_engine\utils\imgui\imstb_rectpack.h" />
+    <ClInclude Include="..\..\barebone_engine\barebone_engine\utils\imgui\imstb_textedit.h" />
+    <ClInclude Include="..\..\barebone_engine\barebone_engine\utils\imgui\imstb_truetype.h" />
+    <ClInclude Include="..\..\barebone_engine\barebone_engine\utils\mesh.h" />
+    <ClInclude Include="..\..\barebone_engine\barebone_engine\utils\model.h" />
+    <ClInclude Include="..\..\barebone_engine\barebone_engine\utils\modelloader.h" />
+    <ClInclude Include="..\..\barebone_engine\barebone_engine\utils\shader.h" />
+    <ClInclude Include="..\..\barebone_engine\barebone_engine\utils\stb_image.h" />
+    <ClInclude Include="..\..\barebone_engine\barebone_engine\utils\texture.h" />
+    <ClInclude Include="..\..\barebone_engine\barebone_engine\utils\texture_2d.h" />
+    <ClInclude Include="..\..\barebone_engine\barebone_engine\utils\texture_cubemap.h" />
+    <ClInclude Include="..\..\barebone_engine\barebone_engine\utils\texture_rendertarget.h" />
+    <ClInclude Include="..\..\barebone_engine\barebone_engine\utils\vao.h" />
+    <ClInclude Include="..\..\barebone_engine\barebone_engine\utils\vbo.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\barebone_engine\barebone_engine\shader\custom\lightFS.glsl" />
+    <None Include="..\..\barebone_engine\barebone_engine\shader\custom\lightVS.glsl" />
+    <None Include="..\..\barebone_engine\barebone_engine\shader\custom\postprocessingFS.glsl" />
+    <None Include="..\..\barebone_engine\barebone_engine\shader\custom\postprocessingVS.glsl" />
+    <None Include="..\..\barebone_engine\barebone_engine\shader\custom\showCollidersFS.glsl" />
+    <None Include="..\..\barebone_engine\barebone_engine\shader\custom\showCollidersVS.glsl" />
+    <None Include="..\..\barebone_engine\barebone_engine\shader\custom\showNormalsFS.glsl" />
+    <None Include="..\..\barebone_engine\barebone_engine\shader\custom\showNormalsGS.glsl" />
+    <None Include="..\..\barebone_engine\barebone_engine\shader\custom\showNormalsVS.glsl" />
+    <None Include="..\..\barebone_engine\barebone_engine\shader\custom\showVerticesFS.glsl" />
+    <None Include="..\..\barebone_engine\barebone_engine\shader\custom\showVerticesGS.glsl" />
+    <None Include="..\..\barebone_engine\barebone_engine\shader\custom\showVerticesVS.glsl" />
+    <None Include="..\..\barebone_engine\barebone_engine\shader\custom\skyboxFS.glsl" />
+    <None Include="..\..\barebone_engine\barebone_engine\shader\custom\skyboxVS.glsl" />
+    <None Include="..\..\barebone_engine\barebone_engine\shader\custom\testStandardFS.glsl" />
+    <None Include="..\..\barebone_engine\barebone_engine\shader\custom\testStandardVS.glsl" />
+    <None Include="..\..\barebone_engine\barebone_engine\shader\custom\waterFS.glsl" />
+    <None Include="..\..\barebone_engine\barebone_engine\shader\custom\waterGS.glsl" />
+    <None Include="..\..\barebone_engine\barebone_engine\shader\custom\waterNormalsFS.glsl" />
+    <None Include="..\..\barebone_engine\barebone_engine\shader\custom\waterNormalsGS.glsl" />
+    <None Include="..\..\barebone_engine\barebone_engine\shader\custom\waterNormalsVS.glsl" />
+    <None Include="..\..\barebone_engine\barebone_engine\shader\custom\waterVS.glsl" />
+    <None Include="..\..\barebone_engine\barebone_engine\shader\standard.frag" />
+    <None Include="..\..\barebone_engine\barebone_engine\shader\standard.vert" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
