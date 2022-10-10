@@ -1,0 +1,15 @@
+#version 430 core
+
+layout (local_size_x = 1, local_size_y = 1, local_size_z = 1) in;
+
+layout(r32f, binding = 0) uniform image3D imgOutput;
+
+void main() {
+    float density = 0.0f;
+    ivec3 texelCoord = ivec3(gl_GlobalInvocationID.xyz);
+	
+    density = 1.0f;
+
+    // imageStore always expects a vec4 as color output, regardless of image format
+    imageStore(imgOutput, texelCoord, ivec4(density, 0.0f, 0.0f, 0.0f));
+}

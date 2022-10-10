@@ -167,6 +167,8 @@
     <ClCompile Include="..\..\barebone_engine\barebone_engine\utils\texture_rendertarget.cpp" />
     <ClCompile Include="..\..\barebone_engine\barebone_engine\utils\vao.cpp" />
     <ClCompile Include="..\..\barebone_engine\barebone_engine\utils\vbo.cpp" />
+    <ClCompile Include="utils\terrain.cpp" />
+    <ClCompile Include="utils\texture_3d.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\barebone_engine\barebone_engine\core\application.h" />
@@ -208,6 +210,8 @@
     <ClInclude Include="..\..\barebone_engine\barebone_engine\utils\texture_rendertarget.h" />
     <ClInclude Include="..\..\barebone_engine\barebone_engine\utils\vao.h" />
     <ClInclude Include="..\..\barebone_engine\barebone_engine\utils\vbo.h" />
+    <ClInclude Include="utils\terrain.h" />
+    <ClInclude Include="utils\texture_3d.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\barebone_engine\barebone_engine\shader\custom\lightFS.glsl" />
@@ -234,6 +238,8 @@
     <None Include="..\..\barebone_engine\barebone_engine\shader\custom\waterVS.glsl" />
     <None Include="..\..\barebone_engine\barebone_engine\shader\standard.frag" />
     <None Include="..\..\barebone_engine\barebone_engine\shader\standard.vert" />
+    <None Include="shader\compute\cubesFromDensityCS.glsl" />
+    <None Include="shader\compute\densityCS.glsl" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

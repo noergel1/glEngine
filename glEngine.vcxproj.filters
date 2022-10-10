@@ -38,6 +38,12 @@
     <Filter Include="utils\imgui">
       <UniqueIdentifier>{59ae8314-4b14-48e1-9c8b-782449e89c8d}</UniqueIdentifier>
     </Filter>
+    <Filter Include="utils\terrain">
+      <UniqueIdentifier>{e6475846-af17-4ca9-8e2b-e5af32d9ed19}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="shader\compute">
+      <UniqueIdentifier>{81e3431e-f9f5-47fa-a9d7-ad4ad4b54f6d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\barebone_engine\barebone_engine\main.cpp">
@@ -65,9 +71,6 @@
       <Filter>utils\texture</Filter>
     </ClCompile>
     <ClCompile Include="..\..\barebone_engine\barebone_engine\utils\texture_cubemap.cpp">
-      <Filter>utils\texture</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\barebone_engine\barebone_engine\utils\texture_rendertarget.cpp">
       <Filter>utils\texture</Filter>
     </ClCompile>
     <ClCompile Include="..\..\barebone_engine\barebone_engine\utils\collision_detection.cpp">
@@ -145,6 +148,15 @@
     <ClCompile Include="..\..\barebone_engine\barebone_engine\utils\imgui\imgui_widgets.cpp">
       <Filter>utils\imgui</Filter>
     </ClCompile>
+    <ClCompile Include="utils\texture_3d.cpp">
+      <Filter>utils\texture</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\barebone_engine\barebone_engine\utils\texture_rendertarget.cpp">
+      <Filter>utils\texture</Filter>
+    </ClCompile>
+    <ClCompile Include="utils\terrain.cpp">
+      <Filter>utils\terrain</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\barebone_engine\barebone_engine\utils\benchmark.h">
@@ -166,9 +178,6 @@
       <Filter>utils\texture</Filter>
     </ClInclude>
     <ClInclude Include="..\..\barebone_engine\barebone_engine\utils\texture_cubemap.h">
-      <Filter>utils\texture</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\barebone_engine\barebone_engine\utils\texture_rendertarget.h">
       <Filter>utils\texture</Filter>
     </ClInclude>
     <ClInclude Include="..\..\barebone_engine\barebone_engine\utils\collision_detection.h">
@@ -264,6 +273,15 @@
     <ClInclude Include="..\..\barebone_engine\barebone_engine\utils\imgui\imstb_truetype.h">
       <Filter>utils\imgui</Filter>
     </ClInclude>
+    <ClInclude Include="utils\texture_3d.h">
+      <Filter>utils\texture</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\barebone_engine\barebone_engine\utils\texture_rendertarget.h">
+      <Filter>utils\texture</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\terrain.h">
+      <Filter>utils\terrain</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\barebone_engine\barebone_engine\shader\custom\lightFS.glsl">
@@ -337,6 +355,12 @@
     </None>
     <None Include="..\..\barebone_engine\barebone_engine\shader\standard.vert">
       <Filter>shader</Filter>
+    </None>
+    <None Include="shader\compute\densityCS.glsl">
+      <Filter>shader\compute</Filter>
+    </None>
+    <None Include="shader\compute\cubesFromDensityCS.glsl">
+      <Filter>shader\compute</Filter>
     </None>
   </ItemGroup>
 </Project>
