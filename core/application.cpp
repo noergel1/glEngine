@@ -140,6 +140,8 @@ bool Application::runApplication()
 
 #endif // !NDEBUG
 
+    printComputeShaderLimits();
+
     m_gameLogic->setupGame();
 
     while (!glfwWindowShouldClose(m_window))
@@ -193,116 +195,6 @@ bool Application::runApplication()
     return true;
 }
 
-//bool Application::updateUniforms() {
-//    updateCameraMatrices();
-//
-//    glBindBuffer( GL_UNIFORM_BUFFER, timeBuffer );
-//    glBufferSubData( GL_UNIFORM_BUFFER, 0, sizeof( float ), &lastFrame );
-//    glBindBuffer( GL_UNIFORM_BUFFER, 0 );
-//
-//        // uniform buffer for directional light
-//    glBindBuffer( GL_UNIFORM_BUFFER, dirLightBuffer );
-//
-//    //set the directional light here, because it doesn't need to be updated every frame
-//    glm::vec3 lightDirection = glm::vec3( 0.1f, -1.0f, 0.1f );
-//    glm::vec3 ambientColor = glm::vec3( 0.2f );
-//    glm::vec3 diffuseColor = glm::vec3( 0.2f );
-//    glm::vec3 specularColor = glm::vec3( 1.0f );
-//
-//    glBufferSubData( GL_UNIFORM_BUFFER, 0, sizeof( glm::vec3 ), glm::value_ptr( lightDirection ) );
-//    glBufferSubData( GL_UNIFORM_BUFFER, sizeof( glm::vec4 ), sizeof( glm::vec3 ), glm::value_ptr( ambientColor ) );
-//    glBufferSubData( GL_UNIFORM_BUFFER, 2 * sizeof( glm::vec4 ), sizeof( glm::vec3 ), glm::value_ptr( diffuseColor ) );
-//    glBufferSubData( GL_UNIFORM_BUFFER, 3 * sizeof( glm::vec4 ), sizeof( glm::vec3 ), glm::value_ptr( specularColor ) );
-//    glBindBuffer( GL_UNIFORM_BUFFER, 0 );
-//
-//    // set the camera position
-//    glBindBuffer( GL_UNIFORM_BUFFER, cameraBuffer );
-//    glm::vec3 cameraPos = m_gameLogic->getCamera()->getPosition();
-//    glBufferSubData( GL_UNIFORM_BUFFER, 0, sizeof( glm::vec3 ), &cameraPos );
-//    glBindBuffer( GL_UNIFORM_BUFFER, 0 );
-//
-//    return true;
-//}
-
-
-
-bool Application::renderFrame() {
-
-    // render scene
-    // --------------
-
-    //m_renderer->renderScene( entities, std::vector<std::string>{"skybox"});
-
-
-    // render skybox
-    // --------------
-    //change depth function to LEQUAL, so the skybox doesn't z-fight with the clearcolor
-    //glDepthFunc( GL_LEQUAL );
-    //// change face culling to cull outer instead of inner faces
-    //glCullFace( GL_FRONT );
-    //m_renderer->renderEntities( "skybox", entities.at( "skybox" ) );
-    //resetTesting();
-
-    // render debugging options
-    // --------------
-    //if (m_settings.SHOW_NORMALS) {
-    //    m_renderer->renderScene( entities, "showNormals", std::vector<ModelName>{ModelName::SKYBOX, ModelName::WATER} );
-    //    m_renderer->renderEntities( ModelName::WATER, entities.at(ModelName::WATER), "waterNormals");
-    //}
-
-    //if (m_settings.SHOW_VERTICES) {
-    //    m_renderer->renderScene( entities, "showVertices", std::vector<ModelName>{ModelName::SKYBOX, ModelName::WATER} );
-    //}
-
-    //if (m_settings.SHOW_COLLIDERS) {
-    //    m_renderer->renderColliders( entities, m_gameLogic->getColliders(), std::vector<ModelName>{ModelName::SKYBOX, ModelName::WATER} );
-    //};
-
-    return false;
-}
-
-bool Application::SetUniforms() {
-        //standard shader
-        // --------------
-    //unsigned int standardShader = m_renderer->getShaderID("standard");
-    //Shader::useShader( standardShader );
-
-    //// set material sampler slots
-    //Shader::setInt( standardShader, "material1.diffuse", 0 );
-    //Shader::setInt( standardShader, "material1.specular", 1 );
-    //Shader::setFloat( standardShader, "material1.shininess", 16.0f );
-
-    //Shader::useShader( 0 );
-
-    ////water shader
-    //// --------------
-    //unsigned int waterShader = m_renderer->getShaderID("water");
-    //Shader::useShader( waterShader );
-    //Shader::setVec3( waterShader, "viewPos", m_gameLogic->getCamera()->getPosition() );
-    //Shader::setInt( waterShader, "reflectionTexture", 0 );
-    //Shader::setInt( waterShader, "refractionTexture", 1 );
-    //Shader::setInt( waterShader, "dudvTexture", 2 );
-    //Shader::useShader( 0 );
-
-    ////post processing
-    //// --------------
-    //if (!m_settings.POSTPROCESSING_KERNEL.empty())         {
-    //    unsigned int postprocessingShader = m_renderer->getShaderID( "postprocessing" );
-    //    const std::vector<float> kernel = m_settings.POSTPROCESSING_KERNEL;
-    //    Shader::useShader( postprocessingShader );
-    //    Shader::setInt( postprocessingShader, "screenTexture", 0 );
-    //    for (int i = 0; i < 9; i++) {
-    //        std::string curKernel = "kernel[" + std::to_string( i ) + "]";
-    //        Shader::setFloat( postprocessingShader, curKernel, kernel[i] );
-    //    }
-    //    Shader::useShader( 0 );
-    //}
-
-
-    return false;
-}
-
-
 void Application::fillImGui() {
         // imgui
 #ifndef NDEBUG
@@ -343,8 +235,6 @@ bool Application::stopApplication()
 
     return false;
 }
-
-
 
 
 
@@ -427,7 +317,7 @@ void Application::process_scroll(GLFWwindow* _window, double _xoffset, double _y
 }
 
 bool Application::clearBufferBits() {
-    glClearColor( 1.0f, 0.0f, 0.0f, 1.0f );
+    glClearColor( 0.5f, 0.2f, 0.3f, 1.0f );
     glClear( GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT | GL_STENCIL_BUFFER_BIT );
 
     return false;
@@ -449,16 +339,6 @@ bool Application::resetTesting() {
 
     return false;
 }
-
-bool Application::setClippingPlane( glm::vec4 _clippingPlane ) {
-    glBindBuffer( GL_UNIFORM_BUFFER, clippingPlaneBuffer );
-    glBufferSubData( GL_UNIFORM_BUFFER, 0, sizeof( glm::vec4 ), glm::value_ptr( _clippingPlane ) );
-    glBindBuffer( GL_UNIFORM_BUFFER, 0 );
-    return false;
-}
-
-
-
 
 void Application
 ::enablePolygonMode()

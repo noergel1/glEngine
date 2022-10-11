@@ -8,6 +8,7 @@ RessourceManager::RessourceManager()
 
 	// compile custom shaders
 	loadCustomShaders();
+	loadComputeShaders();
 
 	// load models
 
@@ -145,6 +146,29 @@ RessourceManager::RessourceManager()
         return shaderId;
 	}
 
+	const unsigned int RessourceManager::compileShader( std::string _computeCode ) {
+		 unsigned int shaderId = 0;
+		 const char* computeCode = _computeCode.c_str();
+
+        // 2. compile shader
+        unsigned int compute;
+        compute = glCreateShader(GL_COMPUTE_SHADER);
+        glShaderSource(compute, 1, &computeCode, NULL);
+        glCompileShader(compute);
+        checkCompileErrors(compute, "COMPUTE");
+
+        // shader Program
+        shaderId = glCreateProgram();
+        glAttachShader(shaderId, compute);
+        glLinkProgram(shaderId);
+        checkCompileErrors(shaderId, "PROGRAM");
+
+        // delete the shader as they're linked into our program now and no longer necessery
+        glDeleteShader(compute);
+
+        return shaderId;
+	}
+
 	void RessourceManager::setStandardShaderUniforms( const unsigned int _shader, const unsigned int _diffuseCount, const bool _specular, const bool _ambient, const bool _emissive, const bool _height, const bool _normal ) {
 		// TODO: check if binding shader is even necessary here
 		Shader::useShader( _shader );
@@ -238,6 +262,20 @@ RessourceManager::RessourceManager()
 
 			m_shaders.insert( std::pair<const std::string, const unsigned int>( shaderTitle, shader ) );
 
+		}
+	}
+
+	void RessourceManager::loadComputeShaders() {
+		boost::regex shaderRegex;
+		std::vector<std::string> shaderContents;
+
+		for (const auto& dir_entry : boost::filesystem::directory_iterator( "shader\\compute" )) {
+			std::string shaderPath = dir_entry.path().string();
+
+			std::string shaderTitle = "compute/" + shaderPath.substr( 15, shaderPath.length() - 20 );
+
+			unsigned int shaderId = compileShader(getFileContent( shaderPath ));
+			m_shaders.insert( std::pair<const std::string, const unsigned int>( shaderTitle, shaderId ) );
 		}
 	}
 

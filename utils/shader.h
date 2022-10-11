@@ -104,6 +104,51 @@ public:
 
         return shaderId;
     }
+
+    static unsigned int createComputeShader( const char* _shaderPath ) {
+        unsigned int shaderId = 0;
+
+        // 1. retrieve the vertex/fragment source code from filePath
+        std::string ShaderCode;
+        std::ifstream shaderFile;
+        // ensure ifstream objects can throw exceptions:
+        shaderFile.exceptions (std::ifstream::failbit | std::ifstream::badbit);
+        try 
+        {
+            // open files
+            shaderFile.open(_shaderPath);
+            std::stringstream shaderStream;
+            // read file's buffer contents into streams
+            shaderStream << shaderFile.rdbuf();	
+            // close file handlers
+            shaderFile.close();
+            // convert stream into string
+            ShaderCode = shaderStream.str();
+        }
+        catch (std::ifstream::failure& e)
+        {
+            std::cout << "ERROR::COMPUTE_SHADER::FILE_NOT_SUCCESFULLY_READ: " << _shaderPath << std::endl;
+        }
+        const char* shaderCode = ShaderCode.c_str();
+        // 2. compile shader
+        unsigned int compute;
+        compute = glCreateShader(GL_COMPUTE_SHADER);
+        glShaderSource(compute, 1, &shaderCode, NULL);
+        glCompileShader(compute);
+        checkCompileErrors(compute, "COMPUTE");
+
+        // shader Program
+        shaderId = glCreateProgram();
+        glAttachShader(shaderId, compute);
+        glLinkProgram(shaderId);
+        checkCompileErrors(shaderId, "PROGRAM");
+
+        // delete the shader as they're linked into our program now and no longer necessery
+        glDeleteShader(compute);
+
+        return shaderId;
+    }
+
     // activate the shader
     // ------------------------------------------------------------------------
     static bool useShader(const unsigned int _id) 

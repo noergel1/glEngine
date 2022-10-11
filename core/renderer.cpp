@@ -8,6 +8,16 @@
 
 	void Renderer::renderScene( Scene& _scene )
 	{
+		// render terrain
+		std::vector<Mesh> terrainMeshes = _scene.terrain.getMeshes();
+		Mesh cubeMesh = DataProvider::generateCubeMesh( 1.0f );
+
+		Shader::useShader(terrainMeshes[0].m_shader);
+		terrainMeshes[0].bindVao();
+		//cubeMesh.bindVao();
+		Shader::setMat4( terrainMeshes[0].m_shader, "model", glm::mat4(1.0f));
+		glDrawElements( GL_TRIANGLES, 36, GL_UNSIGNED_INT, 0 );
+
 		std::vector<Mesh> meshes;
 
 		// set instancing buffers
@@ -53,7 +63,8 @@
 		_scene.skybox.bindVao();
 		_scene.skybox.bindTextures();
 		glDrawElements( GL_TRIANGLES, _scene.skybox.indiceCount, GL_UNSIGNED_INT, 0 );
-
+		VAO::unbind();
+		Shader::useShader( 0 );
 	}
 
 	

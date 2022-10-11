@@ -17,6 +17,7 @@ public:
 	VBO();
 	VBO(std::vector<float> _vertices);
 
+	unsigned int getId();
 	void BufferData( std::vector<float> _vertices );
 
 	void bind();

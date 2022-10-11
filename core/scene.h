@@ -9,6 +9,7 @@
 #include "../utils/mesh.h"
 #include "../utils/dataprovider.h"
 #include "../utils/camera.h"
+#include "../utils/terrain.h"
 
 #define DIRLIGHT_UNIFORM_SLOT 2
 #define POINTLIGHTS_UNIFORM_SLOT 5
@@ -57,6 +58,7 @@ public:
 
 	std::map<std::string, std::vector<Entity*>> entities;
 	Mesh skybox;
+	Terrain terrain;
 
 private:
 	GameSettings m_settings;

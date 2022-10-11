@@ -46,321 +46,327 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\barebone_engine\barebone_engine\main.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\barebone_engine\barebone_engine\gl.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\barebone_engine\barebone_engine\utils\benchmark.cpp">
-      <Filter>utils\other</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\barebone_engine\barebone_engine\utils\camera.cpp">
-      <Filter>utils\camera</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\barebone_engine\barebone_engine\utils\camera_freefloat.cpp">
-      <Filter>utils\camera</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\barebone_engine\barebone_engine\utils\camera_isometric.cpp">
-      <Filter>utils\camera</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\barebone_engine\barebone_engine\utils\texture.cpp">
-      <Filter>utils\texture</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\barebone_engine\barebone_engine\utils\texture_2d.cpp">
-      <Filter>utils\texture</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\barebone_engine\barebone_engine\utils\texture_cubemap.cpp">
-      <Filter>utils\texture</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\barebone_engine\barebone_engine\utils\collision_detection.cpp">
-      <Filter>utils\gamelogic</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\barebone_engine\barebone_engine\utils\cooldown.cpp">
-      <Filter>utils\gamelogic</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\barebone_engine\barebone_engine\utils\dataprovider.cpp">
-      <Filter>utils\model</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\barebone_engine\barebone_engine\utils\helpers.cpp">
-      <Filter>utils\other</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\barebone_engine\barebone_engine\utils\mesh.cpp">
-      <Filter>utils\model</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\barebone_engine\barebone_engine\utils\model.cpp">
-      <Filter>utils\model</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\barebone_engine\barebone_engine\utils\modelloader.cpp">
-      <Filter>utils\model</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\barebone_engine\barebone_engine\utils\debug.cpp">
-      <Filter>utils\other</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\barebone_engine\barebone_engine\utils\framebuffer.cpp">
-      <Filter>utils\buffer</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\barebone_engine\barebone_engine\utils\ebo.cpp">
-      <Filter>utils\buffer</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\barebone_engine\barebone_engine\utils\vao.cpp">
-      <Filter>utils\buffer</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\barebone_engine\barebone_engine\utils\vbo.cpp">
-      <Filter>utils\buffer</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\barebone_engine\barebone_engine\core\application.cpp">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\barebone_engine\barebone_engine\core\gamelogic.cpp">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\barebone_engine\barebone_engine\core\modelmanager.cpp">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\barebone_engine\barebone_engine\core\renderer.cpp">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\barebone_engine\barebone_engine\core\ressourcemanager.cpp">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\barebone_engine\barebone_engine\core\scene.cpp">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\barebone_engine\barebone_engine\utils\imgui\imgui.cpp">
-      <Filter>utils\imgui</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\barebone_engine\barebone_engine\utils\imgui\imgui_demo.cpp">
-      <Filter>utils\imgui</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\barebone_engine\barebone_engine\utils\imgui\imgui_draw.cpp">
-      <Filter>utils\imgui</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\barebone_engine\barebone_engine\utils\imgui\imgui_impl_glfw.cpp">
-      <Filter>utils\imgui</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\barebone_engine\barebone_engine\utils\imgui\imgui_impl_opengl3.cpp">
-      <Filter>utils\imgui</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\barebone_engine\barebone_engine\utils\imgui\imgui_tables.cpp">
-      <Filter>utils\imgui</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\barebone_engine\barebone_engine\utils\imgui\imgui_widgets.cpp">
-      <Filter>utils\imgui</Filter>
-    </ClCompile>
     <ClCompile Include="utils\texture_3d.cpp">
-      <Filter>utils\texture</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\barebone_engine\barebone_engine\utils\texture_rendertarget.cpp">
       <Filter>utils\texture</Filter>
     </ClCompile>
     <ClCompile Include="utils\terrain.cpp">
       <Filter>utils\terrain</Filter>
     </ClCompile>
+    <ClCompile Include="utils\ebo.cpp">
+      <Filter>utils\buffer</Filter>
+    </ClCompile>
+    <ClCompile Include="utils\framebuffer.cpp">
+      <Filter>utils\buffer</Filter>
+    </ClCompile>
+    <ClCompile Include="utils\vao.cpp">
+      <Filter>utils\buffer</Filter>
+    </ClCompile>
+    <ClCompile Include="utils\vbo.cpp">
+      <Filter>utils\buffer</Filter>
+    </ClCompile>
+    <ClCompile Include="utils\camera.cpp">
+      <Filter>utils\camera</Filter>
+    </ClCompile>
+    <ClCompile Include="utils\camera_freefloat.cpp">
+      <Filter>utils\camera</Filter>
+    </ClCompile>
+    <ClCompile Include="utils\camera_isometric.cpp">
+      <Filter>utils\camera</Filter>
+    </ClCompile>
+    <ClCompile Include="utils\collision_detection.cpp">
+      <Filter>utils\gamelogic</Filter>
+    </ClCompile>
+    <ClCompile Include="utils\cooldown.cpp">
+      <Filter>utils\gamelogic</Filter>
+    </ClCompile>
+    <ClCompile Include="utils\imgui\imgui.cpp">
+      <Filter>utils\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="utils\imgui\imgui_demo.cpp">
+      <Filter>utils\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="utils\imgui\imgui_draw.cpp">
+      <Filter>utils\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="utils\imgui\imgui_impl_glfw.cpp">
+      <Filter>utils\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="utils\imgui\imgui_impl_opengl3.cpp">
+      <Filter>utils\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="utils\imgui\imgui_tables.cpp">
+      <Filter>utils\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="utils\imgui\imgui_widgets.cpp">
+      <Filter>utils\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="core\application.cpp">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\gamelogic.cpp">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\modelmanager.cpp">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\renderer.cpp">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\ressourcemanager.cpp">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\scene.cpp">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="utils\dataprovider.cpp">
+      <Filter>utils\model</Filter>
+    </ClCompile>
+    <ClCompile Include="utils\mesh.cpp">
+      <Filter>utils\model</Filter>
+    </ClCompile>
+    <ClCompile Include="utils\model.cpp">
+      <Filter>utils\model</Filter>
+    </ClCompile>
+    <ClCompile Include="utils\modelloader.cpp">
+      <Filter>utils\model</Filter>
+    </ClCompile>
+    <ClCompile Include="utils\benchmark.cpp">
+      <Filter>utils\other</Filter>
+    </ClCompile>
+    <ClCompile Include="utils\debug.cpp">
+      <Filter>utils\other</Filter>
+    </ClCompile>
+    <ClCompile Include="utils\helpers.cpp">
+      <Filter>utils\other</Filter>
+    </ClCompile>
+    <ClCompile Include="utils\texture.cpp">
+      <Filter>utils\texture</Filter>
+    </ClCompile>
+    <ClCompile Include="utils\texture_2d.cpp">
+      <Filter>utils\texture</Filter>
+    </ClCompile>
+    <ClCompile Include="utils\texture_cubemap.cpp">
+      <Filter>utils\texture</Filter>
+    </ClCompile>
+    <ClCompile Include="utils\texture_rendertarget.cpp">
+      <Filter>utils\texture</Filter>
+    </ClCompile>
+    <ClCompile Include="gl.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\barebone_engine\barebone_engine\utils\benchmark.h">
-      <Filter>utils\other</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\barebone_engine\barebone_engine\utils\camera.h">
-      <Filter>utils\camera</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\barebone_engine\barebone_engine\utils\camera_freefloat.h">
-      <Filter>utils\camera</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\barebone_engine\barebone_engine\utils\camera_isometric.h">
-      <Filter>utils\camera</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\barebone_engine\barebone_engine\utils\texture.h">
-      <Filter>utils\texture</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\barebone_engine\barebone_engine\utils\texture_2d.h">
-      <Filter>utils\texture</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\barebone_engine\barebone_engine\utils\texture_cubemap.h">
-      <Filter>utils\texture</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\barebone_engine\barebone_engine\utils\collision_detection.h">
-      <Filter>utils\gamelogic</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\barebone_engine\barebone_engine\utils\cooldown.h">
-      <Filter>utils\gamelogic</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\barebone_engine\barebone_engine\utils\dataprovider.h">
-      <Filter>utils\model</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\barebone_engine\barebone_engine\utils\definitions.h">
-      <Filter>utils\other</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\barebone_engine\barebone_engine\utils\debug.h">
-      <Filter>utils\other</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\barebone_engine\barebone_engine\utils\helpers.h">
-      <Filter>utils\other</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\barebone_engine\barebone_engine\utils\mesh.h">
-      <Filter>utils\model</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\barebone_engine\barebone_engine\utils\model.h">
-      <Filter>utils\model</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\barebone_engine\barebone_engine\utils\framebuffer.h">
-      <Filter>utils\buffer</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\barebone_engine\barebone_engine\utils\ebo.h">
-      <Filter>utils\buffer</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\barebone_engine\barebone_engine\utils\vbo.h">
-      <Filter>utils\buffer</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\barebone_engine\barebone_engine\utils\vao.h">
-      <Filter>utils\buffer</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\barebone_engine\barebone_engine\utils\stb_image.h">
-      <Filter>utils\other</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\barebone_engine\barebone_engine\utils\modelloader.h">
-      <Filter>utils\model</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\barebone_engine\barebone_engine\utils\shader.h">
-      <Filter>shader</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\barebone_engine\barebone_engine\core\application.h">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\barebone_engine\barebone_engine\core\gamelogic.h">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\barebone_engine\barebone_engine\core\gamesettings.h">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\barebone_engine\barebone_engine\core\modelmanager.h">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\barebone_engine\barebone_engine\core\renderer.h">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\barebone_engine\barebone_engine\core\ressourcemanager.h">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\barebone_engine\barebone_engine\core\scene.h">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\barebone_engine\barebone_engine\utils\imgui\imconfig.h">
-      <Filter>utils\imgui</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\barebone_engine\barebone_engine\utils\imgui\imgui.h">
-      <Filter>utils\imgui</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\barebone_engine\barebone_engine\utils\imgui\imgui_impl_glfw.h">
-      <Filter>utils\imgui</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\barebone_engine\barebone_engine\utils\imgui\imgui_impl_opengl3.h">
-      <Filter>utils\imgui</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\barebone_engine\barebone_engine\utils\imgui\imgui_impl_opengl3_loader.h">
-      <Filter>utils\imgui</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\barebone_engine\barebone_engine\utils\imgui\imgui_internal.h">
-      <Filter>utils\imgui</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\barebone_engine\barebone_engine\utils\imgui\imstb_rectpack.h">
-      <Filter>utils\imgui</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\barebone_engine\barebone_engine\utils\imgui\imstb_textedit.h">
-      <Filter>utils\imgui</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\barebone_engine\barebone_engine\utils\imgui\imstb_truetype.h">
-      <Filter>utils\imgui</Filter>
-    </ClInclude>
     <ClInclude Include="utils\texture_3d.h">
-      <Filter>utils\texture</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\barebone_engine\barebone_engine\utils\texture_rendertarget.h">
       <Filter>utils\texture</Filter>
     </ClInclude>
     <ClInclude Include="utils\terrain.h">
       <Filter>utils\terrain</Filter>
     </ClInclude>
+    <ClInclude Include="utils\ebo.h">
+      <Filter>utils\buffer</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\framebuffer.h">
+      <Filter>utils\buffer</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\vao.h">
+      <Filter>utils\buffer</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\vbo.h">
+      <Filter>utils\buffer</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\camera.h">
+      <Filter>utils\camera</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\camera_freefloat.h">
+      <Filter>utils\camera</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\camera_isometric.h">
+      <Filter>utils\camera</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\collision_detection.h">
+      <Filter>utils\gamelogic</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\cooldown.h">
+      <Filter>utils\gamelogic</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\imgui\imconfig.h">
+      <Filter>utils\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\imgui\imgui.h">
+      <Filter>utils\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\imgui\imgui_impl_glfw.h">
+      <Filter>utils\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\imgui\imgui_impl_opengl3.h">
+      <Filter>utils\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\imgui\imgui_impl_opengl3_loader.h">
+      <Filter>utils\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\imgui\imgui_internal.h">
+      <Filter>utils\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\imgui\imstb_rectpack.h">
+      <Filter>utils\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\imgui\imstb_textedit.h">
+      <Filter>utils\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\imgui\imstb_truetype.h">
+      <Filter>utils\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="core\application.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\gamelogic.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\gamesettings.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\modelmanager.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\renderer.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\ressourcemanager.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\scene.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\shader.h">
+      <Filter>shader</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\dataprovider.h">
+      <Filter>utils\model</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\mesh.h">
+      <Filter>utils\model</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\model.h">
+      <Filter>utils\model</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\modelloader.h">
+      <Filter>utils\model</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\benchmark.h">
+      <Filter>utils\other</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\debug.h">
+      <Filter>utils\other</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\definitions.h">
+      <Filter>utils\other</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\helpers.h">
+      <Filter>utils\other</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\stb_image.h">
+      <Filter>utils\other</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\texture.h">
+      <Filter>utils\texture</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\texture_2d.h">
+      <Filter>utils\texture</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\texture_cubemap.h">
+      <Filter>utils\texture</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\texture_rendertarget.h">
+      <Filter>utils\texture</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\..\barebone_engine\barebone_engine\shader\custom\lightFS.glsl">
-      <Filter>shader\custom</Filter>
-    </None>
-    <None Include="..\..\barebone_engine\barebone_engine\shader\custom\lightVS.glsl">
-      <Filter>shader\custom</Filter>
-    </None>
-    <None Include="..\..\barebone_engine\barebone_engine\shader\custom\postprocessingFS.glsl">
-      <Filter>shader\custom</Filter>
-    </None>
-    <None Include="..\..\barebone_engine\barebone_engine\shader\custom\postprocessingVS.glsl">
-      <Filter>shader\custom</Filter>
-    </None>
-    <None Include="..\..\barebone_engine\barebone_engine\shader\custom\showCollidersFS.glsl">
-      <Filter>shader\custom</Filter>
-    </None>
-    <None Include="..\..\barebone_engine\barebone_engine\shader\custom\showCollidersVS.glsl">
-      <Filter>shader\custom</Filter>
-    </None>
-    <None Include="..\..\barebone_engine\barebone_engine\shader\custom\showNormalsFS.glsl">
-      <Filter>shader\custom</Filter>
-    </None>
-    <None Include="..\..\barebone_engine\barebone_engine\shader\custom\showNormalsGS.glsl">
-      <Filter>shader\custom</Filter>
-    </None>
-    <None Include="..\..\barebone_engine\barebone_engine\shader\custom\showNormalsVS.glsl">
-      <Filter>shader\custom</Filter>
-    </None>
-    <None Include="..\..\barebone_engine\barebone_engine\shader\custom\showVerticesFS.glsl">
-      <Filter>shader\custom</Filter>
-    </None>
-    <None Include="..\..\barebone_engine\barebone_engine\shader\custom\showVerticesGS.glsl">
-      <Filter>shader\custom</Filter>
-    </None>
-    <None Include="..\..\barebone_engine\barebone_engine\shader\custom\showVerticesVS.glsl">
-      <Filter>shader\custom</Filter>
-    </None>
-    <None Include="..\..\barebone_engine\barebone_engine\shader\custom\skyboxFS.glsl">
-      <Filter>shader\custom</Filter>
-    </None>
-    <None Include="..\..\barebone_engine\barebone_engine\shader\custom\skyboxVS.glsl">
-      <Filter>shader\custom</Filter>
-    </None>
-    <None Include="..\..\barebone_engine\barebone_engine\shader\custom\testStandardFS.glsl">
-      <Filter>shader\custom</Filter>
-    </None>
-    <None Include="..\..\barebone_engine\barebone_engine\shader\custom\testStandardVS.glsl">
-      <Filter>shader\custom</Filter>
-    </None>
-    <None Include="..\..\barebone_engine\barebone_engine\shader\custom\waterFS.glsl">
-      <Filter>shader\custom</Filter>
-    </None>
-    <None Include="..\..\barebone_engine\barebone_engine\shader\custom\waterGS.glsl">
-      <Filter>shader\custom</Filter>
-    </None>
-    <None Include="..\..\barebone_engine\barebone_engine\shader\custom\waterNormalsFS.glsl">
-      <Filter>shader\custom</Filter>
-    </None>
-    <None Include="..\..\barebone_engine\barebone_engine\shader\custom\waterNormalsGS.glsl">
-      <Filter>shader\custom</Filter>
-    </None>
-    <None Include="..\..\barebone_engine\barebone_engine\shader\custom\waterNormalsVS.glsl">
-      <Filter>shader\custom</Filter>
-    </None>
-    <None Include="..\..\barebone_engine\barebone_engine\shader\custom\waterVS.glsl">
-      <Filter>shader\custom</Filter>
-    </None>
-    <None Include="..\..\barebone_engine\barebone_engine\shader\standard.frag">
-      <Filter>shader</Filter>
-    </None>
-    <None Include="..\..\barebone_engine\barebone_engine\shader\standard.vert">
-      <Filter>shader</Filter>
-    </None>
-    <None Include="shader\compute\densityCS.glsl">
+    <None Include="shader\compute\density.comp">
       <Filter>shader\compute</Filter>
     </None>
-    <None Include="shader\compute\cubesFromDensityCS.glsl">
+    <None Include="shader\custom\lightFS.glsl">
+      <Filter>shader\custom</Filter>
+    </None>
+    <None Include="shader\custom\lightVS.glsl">
+      <Filter>shader\custom</Filter>
+    </None>
+    <None Include="shader\custom\postprocessingFS.glsl">
+      <Filter>shader\custom</Filter>
+    </None>
+    <None Include="shader\custom\postprocessingVS.glsl">
+      <Filter>shader\custom</Filter>
+    </None>
+    <None Include="shader\custom\showCollidersFS.glsl">
+      <Filter>shader\custom</Filter>
+    </None>
+    <None Include="shader\custom\showCollidersVS.glsl">
+      <Filter>shader\custom</Filter>
+    </None>
+    <None Include="shader\custom\showNormalsFS.glsl">
+      <Filter>shader\custom</Filter>
+    </None>
+    <None Include="shader\custom\showNormalsGS.glsl">
+      <Filter>shader\custom</Filter>
+    </None>
+    <None Include="shader\custom\showNormalsVS.glsl">
+      <Filter>shader\custom</Filter>
+    </None>
+    <None Include="shader\custom\showVerticesFS.glsl">
+      <Filter>shader\custom</Filter>
+    </None>
+    <None Include="shader\custom\showVerticesGS.glsl">
+      <Filter>shader\custom</Filter>
+    </None>
+    <None Include="shader\custom\showVerticesVS.glsl">
+      <Filter>shader\custom</Filter>
+    </None>
+    <None Include="shader\custom\skyboxFS.glsl">
+      <Filter>shader\custom</Filter>
+    </None>
+    <None Include="shader\custom\skyboxVS.glsl">
+      <Filter>shader\custom</Filter>
+    </None>
+    <None Include="shader\custom\testStandardFS.glsl">
+      <Filter>shader\custom</Filter>
+    </None>
+    <None Include="shader\custom\testStandardVS.glsl">
+      <Filter>shader\custom</Filter>
+    </None>
+    <None Include="shader\custom\waterFS.glsl">
+      <Filter>shader\custom</Filter>
+    </None>
+    <None Include="shader\custom\waterGS.glsl">
+      <Filter>shader\custom</Filter>
+    </None>
+    <None Include="shader\custom\waterNormalsFS.glsl">
+      <Filter>shader\custom</Filter>
+    </None>
+    <None Include="shader\custom\waterNormalsGS.glsl">
+      <Filter>shader\custom</Filter>
+    </None>
+    <None Include="shader\custom\waterNormalsVS.glsl">
+      <Filter>shader\custom</Filter>
+    </None>
+    <None Include="shader\custom\waterVS.glsl">
+      <Filter>shader\custom</Filter>
+    </None>
+    <None Include="shader\standard.frag">
+      <Filter>shader</Filter>
+    </None>
+    <None Include="shader\standard.vert">
+      <Filter>shader</Filter>
+    </None>
+    <None Include="shader\compute\cubesFromDensity.comp">
       <Filter>shader\compute</Filter>
+    </None>
+    <None Include="shader\custom\terrainFS.glsl">
+      <Filter>shader\custom</Filter>
+    </None>
+    <None Include="shader\custom\terrainVS.glsl">
+      <Filter>shader\custom</Filter>
     </None>
   </ItemGroup>
 </Project>

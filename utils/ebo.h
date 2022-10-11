@@ -9,8 +9,10 @@ private:
 
 
 public:
-	//EBO();														// standard constructor for index arrays
 	EBO(std::vector<unsigned int> _indices);
+	EBO();														// standard constructor for index arrays
+
+	unsigned int getId();
 
 	void bind();
 	static void unbind();

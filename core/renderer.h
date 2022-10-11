@@ -16,7 +16,6 @@
 #include "modelmanager.h"
 #include "scene.h"
 
-#include "../utils/model_data.h"
 
 
 

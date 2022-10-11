@@ -71,50 +71,104 @@ const Mesh DataProvider::generateCubeMesh( float _a) {
     indices.reserve( 36 );
 
 
+    //// front
+    //vertices.insert( vertices.end(), { frontBottomLeft.x, frontBottomLeft.y, frontBottomLeft.z,     front.x,front.y,front.z,   bottomRight.x,  bottomRight.y });
+    //vertices.insert( vertices.end(), { frontBottomRight.x, frontBottomRight.y, frontBottomRight.z,  front.x,front.y,front.z,   bottomLeft.x,   bottomLeft.y });
+    //vertices.insert( vertices.end(), { frontTopRight.x, frontTopRight.y, frontTopRight.z,           front.x,front.y,front.z,   topLeft.x,      topLeft.y });
+    //vertices.insert( vertices.end(), { frontTopLeft.x, frontTopLeft.y, frontTopLeft.z,              front.x,front.y,front.z,   topRight.x,     topRight.y });
+    //indices.insert( indices.end(), {  0, 1, 2, 0, 2, 3 } );
+
+    //// back
+    //vertices.insert( vertices.end(), { backBottomRight.x, backBottomRight.y, backBottomRight.z, back.x,back.y,back.z, bottomRight.x, bottomRight.y });
+    //vertices.insert( vertices.end(), { backBottomLeft.x, backBottomLeft.y, backBottomLeft.z, back.x,back.y,back.z, bottomLeft.x, bottomLeft.y });
+    //vertices.insert( vertices.end(), { backTopLeft.x, backTopLeft.y, backTopLeft.z, back.x,back.y,back.z, topLeft.x, topLeft.y });
+    //vertices.insert( vertices.end(), { backTopRight.x, backTopRight.y, backTopRight.z, back.x,back.y,back.z, topRight.x, topRight.y });
+    //indices.insert( indices.end(), { 4,5,6,4,6,7 } );
+
+    //// left
+    //vertices.insert( vertices.end(), { backBottomLeft.x, backBottomLeft.y, backBottomLeft.z, left.x,left.y,left.z, bottomLeft.x, bottomLeft.y });
+    //vertices.insert( vertices.end(), { frontBottomLeft.x, frontBottomLeft.y, frontBottomLeft.z, left.x,left.y,left.z, bottomRight.x, bottomRight.y });
+    //vertices.insert( vertices.end(), { frontTopLeft.x, frontTopLeft.y, frontTopLeft.z, left.x,left.y,left.z, topRight.x, topRight.y });
+    //vertices.insert( vertices.end(), { backTopLeft.x, backTopLeft.y, backTopLeft.z, left.x,left.y,left.z, topLeft.x, topLeft.y });
+    //indices.insert( indices.end(), { 8, 9, 10, 8, 10, 11 } );
+
+    //// right
+    //vertices.insert( vertices.end(), { frontBottomRight.x, frontBottomRight.y, frontBottomRight.z, right.x,right.y,right.z, bottomRight.x, bottomRight.y });
+    //vertices.insert( vertices.end(), { backBottomRight.x, backBottomRight.y, backBottomRight.z, right.x,right.y,right.z, bottomLeft.x, bottomLeft.y });
+    //vertices.insert( vertices.end(), { backTopRight.x, backTopRight.y, backTopRight.z, right.x,right.y,right.z, topLeft.x, topLeft.y });
+    //vertices.insert( vertices.end(), { frontTopRight.x, frontTopRight.y, frontTopRight.z, right.x,right.y,right.z, topRight.x, topRight.y });
+    //indices.insert( indices.end(), { 12, 13, 14, 12, 14, 15 } );
+
+    //// top
+    //vertices.insert( vertices.end(), { backTopRight.x, backTopRight.y, backTopRight.z, up.x,up.y,up.z, topRight.x, topRight.y });
+    //vertices.insert( vertices.end(), { backTopLeft.x, backTopLeft.y, backTopLeft.z, up.x,up.y,up.z, topLeft.x, topLeft.y });
+    //vertices.insert( vertices.end(), { frontTopLeft.x, frontTopLeft.y, frontTopLeft.z, up.x,up.y,up.z, bottomLeft.x, bottomLeft.y });
+    //vertices.insert( vertices.end(), { frontTopRight.x, frontTopRight.y, frontTopRight.z, up.x,up.y,up.z, bottomRight.x, bottomRight.y });
+    //indices.insert( indices.end(), { 16, 17, 18, 16, 18, 19 } );
+
+    //// bottom
+    //vertices.insert( vertices.end(), { backBottomLeft.x,    backBottomLeft.y,   backBottomLeft.z,   down.x,down.y,down.z,   bottomLeft.x,   bottomLeft.y });
+    //vertices.insert( vertices.end(), { backBottomRight.x,   backBottomRight.y,  backBottomRight.z,  down.x,down.y,down.z,   bottomRight.x,  bottomRight.y });
+    //vertices.insert( vertices.end(), { frontBottomRight.x,  frontBottomRight.y, frontBottomRight.z, down.x,down.y,down.z,   topRight.x,     topRight.y });
+    //vertices.insert( vertices.end(), { frontBottomLeft.x,      frontBottomLeft.y,     frontBottomLeft.z,     down.x,down.y,down.z,   topLeft.x,      topLeft.y });
+    //indices.insert( indices.end(), { 20, 21, 22, 20, 22, 23 } );
+
+    vertices = {
+    // position                  // normals                // texcoords
+    -0.5f,   -0.5f,    0.5f,     0.0f,   0.0f,   1.0f,     1.0f,  0.0f,  
+     0.5f,   -0.5f,    0.5f,     0.0f,   0.0f,   1.0f,     0.0f,  0.0f,  
+     0.5f,    0.5f,    0.5f,     0.0f,   0.0f,   1.0f,     0.0f,  1.0f, 
+    -0.5f,    0.5f,    0.5f,     0.0f,   0.0f,   1.0f,     1.0f,  1.0f,  
+     0.5f,   -0.5f,   -0.5f,     0.0f,   0.0f,  -1.0f,     1.0f,  0.0f, 
+    -0.5f,   -0.5f,   -0.5f,     0.0f,   0.0f,  -1.0f,     0.0f,  0.0f,  
+    -0.5f,    0.5f,   -0.5f,     0.0f,   0.0f,  -1.0f,     0.0f,  1.0f,  
+     0.5f,    0.5f,   -0.5f,     0.0f,   0.0f,  -1.0f,     1.0f,  1.0f,  
+    -0.5f,   -0.5f,   -0.5f,    -1.0f,   0.0f,   0.0f,     0.0f,  0.0f,  
+    -0.5f,   -0.5f,    0.5f,    -1.0f,   0.0f,   0.0f,     1.0f,  0.0f,  
+    -0.5f,    0.5f,    0.5f,    -1.0f,   0.0f,   0.0f,     1.0f,  1.0f,  
+    -0.5f,    0.5f,   -0.5f,    -1.0f,   0.0f,   0.0f,     0.0f,  1.0f,  
+     0.5f,   -0.5f,    0.5f,     1.0f,   0.0f,   0.0f,     1.0f,  0.0f,  
+     0.5f,   -0.5f,   -0.5f,     1.0f,   0.0f,   0.0f,     0.0f,  0.0f,  
+     0.5f,    0.5f,   -0.5f,     1.0f,   0.0f,   0.0f,     0.0f,  1.0f,  
+     0.5f,    0.5f,    0.5f,     1.0f,   0.0f,   0.0f,     1.0f,  1.0f,  
+     0.5f,    0.5f,   -0.5f,     0.0f,   1.0f,   0.0f,     1.0f,  1.0f,  
+    -0.5f,    0.5f,   -0.5f,     0.0f,   1.0f,   0.0f,     0.0f,  1.0f,  
+    -0.5f,    0.5f,    0.5f,     0.0f,   1.0f,   0.0f,     0.0f,  0.0f,  
+     0.5f,    0.5f,    0.5f,     0.0f,   1.0f,   0.0f,     1.0f,  0.0f,  
+    -0.5f,   -0.5f,   -0.5f,     0.0f,  -1.0f,   0.0f,     0.0f,  0.0f,  
+     0.5f,   -0.5f,   -0.5f,     0.0f,  -1.0f,   0.0f,     1.0f,  0.0f,  
+     0.5f,   -0.5f,    0.5f,     0.0f,  -1.0f,   0.0f,     1.0f,  1.0f,  
+    -0.5f,   -0.5f,    0.5f,     0.0f,  -1.0f,   0.0f,     0.0f,  1.0f
+};
+
+    indices = {
     // front
-    vertices.insert( vertices.end(), { frontBottomLeft.x, frontBottomLeft.y, frontBottomLeft.z,     front.x,front.y,front.z,   bottomRight.x,  bottomRight.y });
-    vertices.insert( vertices.end(), { frontBottomRight.x, frontBottomRight.y, frontBottomRight.z,  front.x,front.y,front.z,   bottomLeft.x,   bottomLeft.y });
-    vertices.insert( vertices.end(), { frontTopRight.x, frontTopRight.y, frontTopRight.z,           front.x,front.y,front.z,   topLeft.x,      topLeft.y });
-    vertices.insert( vertices.end(), { frontTopLeft.x, frontTopLeft.y, frontTopLeft.z,              front.x,front.y,front.z,   topRight.x,     topRight.y });
-    indices.insert( indices.end(), {  0, 1, 2, 0, 2, 3 } );
-
+    0,   1,  2,  0,  2,  3, 
     // back
-    vertices.insert( vertices.end(), { backBottomRight.x, backBottomRight.y, backBottomRight.z, back.x,back.y,back.z, bottomRight.x, bottomRight.y });
-    vertices.insert( vertices.end(), { backBottomLeft.x, backBottomLeft.y, backBottomLeft.z, back.x,back.y,back.z, bottomLeft.x, bottomLeft.y });
-    vertices.insert( vertices.end(), { backTopLeft.x, backTopLeft.y, backTopLeft.z, back.x,back.y,back.z, topLeft.x, topLeft.y });
-    vertices.insert( vertices.end(), { backTopRight.x, backTopRight.y, backTopRight.z, back.x,back.y,back.z, topRight.x, topRight.y });
-    indices.insert( indices.end(), { 4,5,6,4,6,7 } );
-
+    4,   5,  6,  4,  6,  7, 
     // left
-    vertices.insert( vertices.end(), { backBottomLeft.x, backBottomLeft.y, backBottomLeft.z, left.x,left.y,left.z, bottomLeft.x, bottomLeft.y });
-    vertices.insert( vertices.end(), { frontBottomLeft.x, frontBottomLeft.y, frontBottomLeft.z, left.x,left.y,left.z, bottomRight.x, bottomRight.y });
-    vertices.insert( vertices.end(), { frontTopLeft.x, frontTopLeft.y, frontTopLeft.z, left.x,left.y,left.z, topRight.x, topRight.y });
-    vertices.insert( vertices.end(), { backTopLeft.x, backTopLeft.y, backTopLeft.z, left.x,left.y,left.z, topLeft.x, topLeft.y });
-    indices.insert( indices.end(), { 8, 9, 10, 8, 10, 11 } );
-
+    8,   9, 10,  8, 10, 11, 
     // right
-    vertices.insert( vertices.end(), { frontBottomRight.x, frontBottomRight.y, frontBottomRight.z, right.x,right.y,right.z, bottomRight.x, bottomRight.y });
-    vertices.insert( vertices.end(), { backBottomRight.x, backBottomRight.y, backBottomRight.z, right.x,right.y,right.z, bottomLeft.x, bottomLeft.y });
-    vertices.insert( vertices.end(), { backTopRight.x, backTopRight.y, backTopRight.z, right.x,right.y,right.z, topLeft.x, topLeft.y });
-    vertices.insert( vertices.end(), { frontTopRight.x, frontTopRight.y, frontTopRight.z, right.x,right.y,right.z, topRight.x, topRight.y });
-    indices.insert( indices.end(), { 12, 13, 14, 12, 14, 15 } );
-
+    12, 13, 14, 12, 14, 15,
     // top
-    vertices.insert( vertices.end(), { backTopRight.x, backTopRight.y, backTopRight.z, up.x,up.y,up.z, topRight.x, topRight.y });
-    vertices.insert( vertices.end(), { backTopLeft.x, backTopLeft.y, backTopLeft.z, up.x,up.y,up.z, topLeft.x, topLeft.y });
-    vertices.insert( vertices.end(), { frontTopLeft.x, frontTopLeft.y, frontTopLeft.z, up.x,up.y,up.z, bottomLeft.x, bottomLeft.y });
-    vertices.insert( vertices.end(), { frontTopRight.x, frontTopRight.y, frontTopRight.z, up.x,up.y,up.z, bottomRight.x, bottomRight.y });
-    indices.insert( indices.end(), { 16, 17, 18, 16, 18, 19 } );
-
+    16, 17, 18, 16, 18, 19, 
     // bottom
-    vertices.insert( vertices.end(), { backBottomLeft.x,    backBottomLeft.y,   backBottomLeft.z,   down.x,down.y,down.z,   bottomLeft.x,   bottomLeft.y });
-    vertices.insert( vertices.end(), { backBottomRight.x,   backBottomRight.y,  backBottomRight.z,  down.x,down.y,down.z,   bottomRight.x,  bottomRight.y });
-    vertices.insert( vertices.end(), { frontBottomRight.x,  frontBottomRight.y, frontBottomRight.z, down.x,down.y,down.z,   topRight.x,     topRight.y });
-    vertices.insert( vertices.end(), { frontBottomLeft.x,      frontBottomLeft.y,     frontBottomLeft.z,     down.x,down.y,down.z,   topLeft.x,      topLeft.y });
-    indices.insert( indices.end(), { 20, 21, 22, 20, 22, 23 } );
+    20, 21, 22, 20, 22, 23
+};
 
     Mesh cubeMesh = Mesh( vertices, indices, true, true, false );
     cubeMesh.setShader( RessourceManager::GetShader( 1, false, false, false, false, false, 7 ) );
+
+    //std::cout << "VERTICES:\n";
+    //for (int i = 0; i < vertices.size(); i++) {
+    //    std::cout << vertices[i] << ",";
+    //}
+    //std::cout << "\nINDICES:\n";
+    //for (int i = 0; i < indices.size(); i++) {
+    //    std::cout << indices[i] << ",";
+    //}
+    //std::cout << "\n";
+
 
     return cubeMesh;
 }

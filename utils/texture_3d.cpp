@@ -20,7 +20,7 @@ Texture_3D::Texture_3D( unsigned int _width, unsigned int _height, unsigned int 
 	glGenTextures(1, &id);
 	glBindTexture(GL_TEXTURE_3D, id);
 
-	glTexImage3D(GL_TEXTURE_3D, 0, _colorMode, _width, _height, _depth, 0, _colorMode, GL_UNSIGNED_BYTE, NULL);
+	glTexImage3D(GL_TEXTURE_3D, 0, GL_R32F, _width, _height, _depth, 0, GL_RED, GL_UNSIGNED_BYTE, NULL);
 
 	glTexParameteri(GL_TEXTURE_3D, GL_TEXTURE_WRAP_S, _wrapS);
 	glTexParameteri(GL_TEXTURE_3D, GL_TEXTURE_WRAP_T, _wrapT);

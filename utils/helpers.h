@@ -8,6 +8,7 @@
 #include "definitions.h"
 #include <fstream>
 #include <sstream>
+#include <iostream>
 #include <map>
 #include <numeric>
 
@@ -20,3 +21,5 @@ float getAngleBetweenVectorsRad( glm::vec3 _vec1, glm::vec3 _vec2 );
 glm::vec3 rotatePointAroundCenter( glm::vec3 _point, glm::vec3 _center, glm::mat4 _rotationMat );
 
 glm::mat4 createSRTMat4( const Entity _entity );
+
+void printComputeShaderLimits();

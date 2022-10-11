@@ -75,8 +75,10 @@ private:
 private:
 	const unsigned int generateShader( const unsigned int _diffuseCount, const bool _specular, const bool _ambient, const bool _emissive, const bool _height, const bool _normal, const unsigned int _vertexFormat );
 	const unsigned int compileShader(std::string _vsCode, std::string _fsCode, std::string _gsCode = "");
+	const unsigned int compileShader(std::string _computeCode );
 	void setStandardShaderUniforms( const unsigned int _shader, const unsigned int _diffuseCount, const bool _specular, const bool _ambient, const bool _emissive, const bool _height, const bool _normal );
 	void loadCustomShaders();
+	void loadComputeShaders();
 	static void checkCompileErrors( GLuint shader, std::string type );
 
 	std::string getFileContent( std::string _filepath );

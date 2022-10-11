@@ -57,3 +57,21 @@ glm::mat4 createSRTMat4( const Entity _entity ) {
 
 		return matrix;
 }
+
+void printComputeShaderLimits() {
+	GLint maxWorkGroupsX = 0;
+    GLint maxWorkGroupsY = 0;
+    GLint maxWorkGroupsZ = 0;
+    glGetIntegeri_v(GL_MAX_COMPUTE_WORK_GROUP_COUNT, 0, &maxWorkGroupsX);
+    glGetIntegeri_v(GL_MAX_COMPUTE_WORK_GROUP_COUNT, 1, &maxWorkGroupsY);
+    glGetIntegeri_v(GL_MAX_COMPUTE_WORK_GROUP_COUNT, 2, &maxWorkGroupsZ);
+    std::cout << "MAX WORK GROUP PER CALL: " << maxWorkGroupsX << " | " << maxWorkGroupsY << " | " << maxWorkGroupsZ << std::endl;
+
+	GLint maxLocalSizeX = 0;
+    GLint maxLocalSizeY = 0;
+    GLint maxLocalSizeZ = 0;
+    glGetIntegeri_v(GL_MAX_COMPUTE_WORK_GROUP_SIZE, 0, &maxLocalSizeX);
+    glGetIntegeri_v(GL_MAX_COMPUTE_WORK_GROUP_SIZE, 1, &maxLocalSizeY);
+    glGetIntegeri_v(GL_MAX_COMPUTE_WORK_GROUP_SIZE, 2, &maxLocalSizeZ);
+    std::cout << "MAX LOCAL SIZE PER WORK GROUP: " << maxLocalSizeX << " | " << maxLocalSizeY << " | " << maxLocalSizeZ << std::endl;
+}

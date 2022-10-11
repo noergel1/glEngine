@@ -9,7 +9,7 @@ Texture_2D::Texture_2D()
 }
 
 
-Texture_2D::Texture_2D(const char* filepath, GLenum wrapS, GLenum wrapR, GLenum filterMag, GLenum filterMin)
+Texture_2D::Texture_2D(const char* filepath, GLenum wrapS, GLenum wrapT, GLenum filterMag, GLenum filterMin)
 	:Texture(GL_TEXTURE_2D)
 {
 	glGenTextures(1, &id);
@@ -39,7 +39,7 @@ Texture_2D::Texture_2D(const char* filepath, GLenum wrapS, GLenum wrapR, GLenum 
 
 		glTexImage2D(GL_TEXTURE_2D, 0, colorMode, width, height, 0, colorMode, GL_UNSIGNED_BYTE, data);
 		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, wrapS);
-		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, wrapR);
+		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, wrapT);
 		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, filterMin);
 		glTexParameteri( GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, filterMag );
 		glGenerateMipmap(GL_TEXTURE_2D);

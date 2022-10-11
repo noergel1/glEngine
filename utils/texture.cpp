@@ -2,6 +2,7 @@
 
 Texture::Texture( GLenum _textureType )
 	:textureType(_textureType)
+	,id(0)
 {
 }
 

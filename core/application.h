@@ -63,15 +63,7 @@ private:
 	// -------------
 	bool setupWindow(unsigned int _width, unsigned int _height);
 	bool setupModels();
-	//bool generateUniformBuffers();
-	bool SetUniforms();
-	//bool updateCameraMatrices();
 
-
-	// execution
-	// -------------
-	bool updateUniforms();
-	bool renderFrame();
 
 	// gamestate
 	// -------------
@@ -121,6 +113,5 @@ private:
 	// utility
 	bool clearBufferBits();
 	bool resetTesting();
-	bool setClippingPlane( glm::vec4 _clippingPlane );
 };
 
