@@ -60,9 +60,6 @@ const Collision CollisionDetection::SphereToTriangle( glm::vec3 _center, float _
 			intersects |= distsq3 < radiussq;
 	}
 
- 
-
-
 	if(inside || intersects)
 	{
 		glm::vec3 best_point = point0;
@@ -98,8 +95,7 @@ const Collision CollisionDetection::SphereToTriangle( glm::vec3 _center, float _
 		}
 	}
  
-	float len = glm::length(intersection_vec);  // vector3 length calculation: 
-	//sqrt( glm::dot( v, v ) );
+	float len = glm::length(intersection_vec);
 	collision.collided = inside || intersects;
 	collision.penetrationNormal = intersection_vec / len;  // normalize
 	collision.penetrationDepth = _radius - len; // radius = sphere radius

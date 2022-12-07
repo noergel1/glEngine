@@ -69,15 +69,6 @@ void Framebuffer::createStencilTextureAttachement(  ) {
     glBindFramebuffer( GL_FRAMEBUFFER, 0 );
 }
 
-//void Framebuffer::createDepthStencilTextureAttachement(  ) {
-//    glBindFramebuffer( GL_FRAMEBUFFER, m_framebufferID );
-//
-//    Texture_2D depthStencilTexure = Texture_2D( m_width, m_height, TextureType::DIFFUSE, 0 );
-//    glFramebufferTexture2D( GL_FRAMEBUFFER, GL_DEPTH_STENCIL_ATTACHMENT, GL_TEXTURE_2D, depthStencilTexure.getID(), 0 );
-//
-//    glBindFramebuffer( GL_FRAMEBUFFER, 0 );
-//}
-
 void Framebuffer::createDepthRenderbufferAttachement(  ) {
     glBindFramebuffer( GL_FRAMEBUFFER, m_framebufferID );
 

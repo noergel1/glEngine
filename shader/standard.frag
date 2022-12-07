@@ -212,29 +212,6 @@ void main()
     #endif
 
     Output = vec4(result, 1.0f);
-//
-////    for(int i = 0; i < NR_POINT_LIGHTS; i++)
-////    {
-////        result += CalcPointLight(pointLights[i]);
-////    }
-//
-//
-////    result += CalcSpotLight(spotLight);
-//
-//        float width = 800, 
-//          height = 600;
-//
-//    vec4 coord = gl_FragCoord;
-//
-//    float x = coord.x / width;
-//    float y = coord.y / height;
-//    
-//    float xDiff = (x - 0.5f); 
-//    float yDiff = (y - 0.5f);
-//    float avgDiff = (abs(xDiff) + abs(yDiff));
-
-
-//    gl_FragColor = vec4(result, 1.0f);
 }
 
 vec3 GetNormal() {

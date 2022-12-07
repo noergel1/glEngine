@@ -8,16 +8,6 @@
 
 	void Renderer::renderScene( Scene& _scene )
 	{
-		// render terrain
-		std::vector<Mesh> terrainMeshes = _scene.terrain.getMeshes();
-		Mesh cubeMesh = DataProvider::generateCubeMesh( 1.0f );
-
-		Shader::useShader(terrainMeshes[0].m_shader);
-		terrainMeshes[0].bindVao();
-		//cubeMesh.bindVao();
-		Shader::setMat4( terrainMeshes[0].m_shader, "model", glm::mat4(1.0f));
-		glDrawElements( GL_TRIANGLES, 36, GL_UNSIGNED_INT, 0 );
-
 		std::vector<Mesh> meshes;
 
 		// set instancing buffers
@@ -52,9 +42,6 @@
 			glDrawElementsInstanced( GL_TRIANGLES, mesh.indiceCount, GL_UNSIGNED_INT, 0, mesh.entityCount );
 
 		}
-
-
-
 
 		// render skybox
 		glDepthFunc( GL_LEQUAL );
@@ -143,23 +130,6 @@
 
 		// free all VAOS
 		std::vector<unsigned int> deletedVaos;
-		//for (auto const& model : m_models)
-		//{
-		//	const ModelData* modelData = model.second;
-
-		//	if (modelData == NULL) continue;
-
-		//	unsigned int modelVao = modelData->m_VAO;
-		//	if (std::find(deletedVaos.begin(), deletedVaos.end(), modelVao) != deletedVaos.end())
-		//	{
-		//		// VAO already in deletedVaos
-		//		continue;
-		//	}
-		//	else
-		//	{
-		//		deletedVaos.push_back(modelVao);
-		//	}
-		//}
 
 		// should also free all VBOs aswell
 
@@ -171,15 +141,6 @@
 
 		// delete all the VAOs at once
 		glDeleteVertexArrays(deletedVaos.size(), &deletedVaos[0]);
-
-
-
-		// free all shaders
-		/*for (auto const& shader : m_shaders)
-		{
-			unsigned int shaderId = shader.second;
-			glDeleteProgram(shaderId);
-		}*/
 
 		return false;
 	};

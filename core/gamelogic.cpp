@@ -10,7 +10,7 @@ GameLogic::GameLogic( GameSettings _settings )
     }
     else {
         m_player = addShip(
-                // position
+            // position
             glm::vec3( 0.0f, 0.0f, 0.0f ),
             //scale
             glm::vec3( 0.1f ),
@@ -61,59 +61,64 @@ void GameLogic::setupGame() {
         glm::vec3( 0.5f ),
         glm::vec3( 0.0f )
         } );
-        Entity* newEntity5 = new Entity ( {
+    Entity* newEntity5 = new Entity ( {
         glm::vec3( 4.0f, 1.0f, 0.0f ),
         glm::vec3( 0.5f ),
         glm::vec3( 0.0f )
-        } );    Entity* newEntity6 = new Entity ( {
+        } );    
+    Entity* newEntity6 = new Entity ( {
         glm::vec3( -4.0f, 1.0f, 0.0f ),
         glm::vec3( 0.5f ),
         glm::vec3( 0.0f )
-        } );    Entity* newEntity7 = new Entity ( {
+        } );    
+    Entity* newEntity7 = new Entity ( {
         glm::vec3( 0.0f, 1.0f, 4.0f ),
         glm::vec3( 0.5f ),
         glm::vec3( 0.0f )
-        } );    Entity* newEntity8 = new Entity ( {
+        } );    
+    Entity* newEntity8 = new Entity ( {
         glm::vec3( 0.0f, 1.0f, -4.0f ),
         glm::vec3( 0.5f ),
         glm::vec3( 0.0f )
         } );
-        Entity* newEntity9 = new Entity ( {
+        
+    Entity* newEntity9 = new Entity ( {
         glm::vec3( 4.0f, 1.0f, -4.0f ),
+        glm::vec3( 0.5f ),
+        glm::vec3( 0.0f )
+        } );
+        
+    Entity* newEntity10 = new Entity ( {
+        glm::vec3( 4.0f, 1.0f, 4.0f ),
         glm::vec3( 0.5f ),
         glm::vec3( 0.0f )
         } );
 
     // set scene lights
-    //m_scene->setDirLight( glm::vec3( 0.1f, -1.0f, 0.1f ), glm::vec3( 1.0f ) );
+    m_scene->setDirLight( glm::vec3( 0.1f, -0.9f, 0.1f ), glm::vec3( 1.0f ) );
 
-    //glm::vec3 pLightCol( 1.0f, 0.0f, 3.0f );
-    //glm::vec3 pLightCol1( 0.0f, 0.0f, 1.0f );
-    //glm::vec3 pLightCol2( 0.0f, 1.0f, 1.0f );
-    //glm::vec3 pLightCol3( 1.0f, 0.0f, 1.0f );
-    //glm::vec3 pLightCol4( 0.0f, 1.0f, 0.0f );
-    //glm::vec3 pLightCol5( 0.0f, 1.0f, 1.0f );
-    //m_scene->entities["lightCube"].push_back(newEntity4);
-    //m_scene->addPointLight( newEntity4, glm::vec3( 0.0f ), pLightCol, 1.0f, 0.027, 0.0028 );
-    //m_scene->entities["lightCube"].push_back(newEntity5);
-    //m_scene->addPointLight( newEntity5, glm::vec3( 0.0f ), pLightCol1, 1.0f, 0.027, 0.0028 );
-    //m_scene->entities["lightCube"].push_back(newEntity6);
-    //m_scene->addPointLight( newEntity6, glm::vec3( 0.0f ), pLightCol2, 1.0f, 0.027, 0.0028 );
-    //m_scene->entities["lightCube"].push_back(newEntity7);
-    //m_scene->addPointLight( newEntity7, glm::vec3( 0.0f ), pLightCol3, 1.0f, 0.027, 0.0028 );
-    //m_scene->entities["lightCube"].push_back(newEntity8);
-    //m_scene->addPointLight( newEntity8, glm::vec3( 0.0f ), pLightCol4, 1.0f, 0.027, 0.0028 );
-    ////m_scene->entities["lightCube"].push_back(newEntity9);
-    ////m_scene->addPointLight( newEntity9, glm::vec3( 0.0f ), pLightCol5, 1.0f, 0.027, 0.0028 );
-
-    ////m_entities["ship"].push_back( newEntity );
-    ////m_entities["ship"].push_back( newEntity1 );
-    ////m_entities["smb"].push_back( newEntity3 );
-    //m_scene->entities["testCube"].push_back( newEntity3 );
-    //m_scene->entities["testCube"].push_back(newEntity1);
-    //m_scene->entities["testCube"].push_back(newEntity2);
-    //m_scene->entities["floor"].push_back(newEntity);
-    //m_entities["budda"].push_back( newEntity4 );
+    glm::vec3 pLightCol( 1.0f, 0.0f, 3.0f );
+    glm::vec3 pLightCol1( 0.0f, 0.0f, 1.0f );
+    glm::vec3 pLightCol2( 0.0f, 1.0f, 1.0f );
+    glm::vec3 pLightCol3( 1.0f, 0.0f, 1.0f );
+    glm::vec3 pLightCol4( 0.0f, 1.0f, 0.0f );
+    glm::vec3 pLightCol5( 0.0f, 1.0f, 1.0f );
+    m_scene->entities["lightCube"].push_back(newEntity4);
+    m_scene->addPointLight( newEntity4, glm::vec3( 0.0f ), pLightCol, 1.0f, 0.027, 0.0028 );
+    m_scene->entities["lightCube"].push_back(newEntity5);
+    m_scene->addPointLight( newEntity5, glm::vec3( 0.0f ), pLightCol1, 1.0f, 0.027, 0.0028 );
+    m_scene->entities["lightCube"].push_back(newEntity6);
+    m_scene->addPointLight( newEntity6, glm::vec3( 0.0f ), pLightCol2, 1.0f, 0.027, 0.0028 );
+    m_scene->entities["lightCube"].push_back(newEntity7);
+    m_scene->addPointLight( newEntity7, glm::vec3( 0.0f ), pLightCol3, 1.0f, 0.027, 0.0028 );
+    m_scene->entities["lightCube"].push_back(newEntity8);
+    m_scene->addPointLight( newEntity8, glm::vec3( 0.0f ), pLightCol4, 1.0f, 0.027, 0.0028 );
+    m_scene->entities["testCube"].push_back( newEntity3 );
+    m_scene->entities["testCube"].push_back(newEntity1);
+    m_scene->entities["testCube"].push_back(newEntity2);
+    m_scene->entities["floor"].push_back(newEntity);
+    m_scene->entities["pizza"].push_back( newEntity10 );
+    m_scene->entities["smb"].push_back( newEntity9 );
 
     std::vector<const char*> skyboxPaths =
     {
@@ -126,14 +131,6 @@ void GameLogic::setupGame() {
     };
     m_scene->setSkybox( skyboxPaths );
 
-    //addShip(
-    //    // position
-    //    glm::vec3( 0.0f, 0.0f, 0.0f ),
-    //    //scale
-    //    glm::vec3( 0.1f ),
-    //    //rotation
-    //    glm::vec3( 0.0f, 0.0f, 0.0f )
-    //);
 
     m_scene->update( 0.0f, 0.0f );
 }
@@ -185,16 +182,6 @@ void GameLogic::processKeyboard( PlayerAction _action, float _deltaTime ) {
 
 // debuggin
 void GameLogic::fillImGui() {
-    //ImGui::Text( "" );
-    //ImGui::Text( "Collision Testing" );
-    //ImGui::Text( "Ship 1" );
-    //ImGui::SliderFloat3( "Position1", &testShip1->Position.x, -5.0f, 5.0f);
-    //ImGui::SliderFloat3( "Rotation1", &testShip1->Rotation.x, -180.0f, 180.0f);
-    //ImGui::SliderFloat3( "Scale1", &testShip1->Scale.x, 0.1f, 5.0f);
-    //ImGui::Text( "Ship 2" );
-    //ImGui::SliderFloat3( "Position2", &testShip2->Position.x, -5.0f, 5.0f);
-    //ImGui::SliderFloat3( "Rotation2", &testShip2->Rotation.x, -180.0f, 180.0f);
-    //ImGui::SliderFloat3( "Scale2", &testShip2->Scale.x, 0.1f, 5.0f);
 }
 
 // entity management

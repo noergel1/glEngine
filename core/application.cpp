@@ -112,12 +112,9 @@ bool Application::setupModels()
     ModelManager::AddModel( "lightCube", lightCubeModel );
 
 
-
-
     std::vector<std::pair<std::string, std::string>> modelList;
-    //modelList.emplace_back( "ship", "ressources/ship/ship_2cannons.obj" );
-    //modelList.emplace_back( "smb", "ressources/fireball/esfera.obj" );
-    //modelList.emplace_back( "budda", "ressources/budda/Pizza.obj" );
+    modelList.emplace_back( "smb", "ressources/fireball/esfera.obj" );
+    modelList.emplace_back( "pizza", "ressources/budda/Pizza.obj" );
     ModelManager::LoadModelList( modelList );
 
 
@@ -201,7 +198,6 @@ void Application::fillImGui() {
         if (cursorEnabled == true)
         {
         ImVec2 windowSize = ImVec2( 50.0f, 50.0f );
-        //ImGui::SetNextWindowSize( windowSize );
 
         ImGui::Begin("Debugging");
         ImGui::Text("Settings");
@@ -223,7 +219,6 @@ void Application::fillImGui() {
 bool Application::stopApplication()
 {
     // delete vaos, vbos & shaders
-    //m_renderer->shutdownRenderer();
 
 #ifndef NDEBUG
     // shutdown imgui if debugmode is enabled

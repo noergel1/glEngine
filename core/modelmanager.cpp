@@ -3,7 +3,6 @@
 
 ModelManager::ModelManager() {
 	// TODO : add the error model
-
 }
 
 void ModelManager::IAddModel( std::string _modelName, Model _model ) {
@@ -21,8 +20,6 @@ Model& ModelManager::IGetModel( std::string _modelName ) {
 		return m_models.at( "error" );
 	}
 }
-
-
 
 void ModelManager::ILoadModelList( const std::vector<std::pair<std::string, std::string>>& _modelList) {
 	for (auto pair : _modelList) {

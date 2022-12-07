@@ -55,8 +55,6 @@ Mesh ModelLoader::processMesh( aiMesh* mesh, const aiScene* scene ) {
     bool hasTexCoords = false;
     bool hasTangentSpace = false;
     
-
-
     // reserve memory in vertices and indices vector for performance
     unsigned int totalIndexCount = mesh->mNumFaces * 3;
 

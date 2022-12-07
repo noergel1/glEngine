@@ -24,7 +24,7 @@ int main(void)
         /* Screen Height: */            600,//px                           
         /* Camera Mode: */              Camera_Mode::FREE_FLOAT,
         /* Postprocessing: */           DataProvider::noPostProcessing(),
-        /* Polygon Mode: */             ENABLE,
+        /* Polygon Mode: */             DISABLE,
         /* Show Normals: */             DISABLE,
         /* Show Vertices: */            DISABLE,
         /* Show Colliders: */           DISABLE,

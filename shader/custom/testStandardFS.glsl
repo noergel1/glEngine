@@ -191,19 +191,10 @@ vec3 reflectDir = reflect(-lightDir, normal);
 
 void main()
 {
-
-//    result = vec4(1.0f);
-//
-    vec3 result = CalcDirLight();
-    result = vec3(0.0f);
-    result += CalcPointLight(pointLights[0]);
-//    result += 3*CalcPointLight(pointLights[1]);
-//    result += 3*CalcPointLight(pointLights[2]);
-//    result += 3*CalcPointLight(pointLights[3]);
-//    result += 3*CalcPointLight(pointLights[4]);
-//    result += 3*CalcPointLight(pointLights[5]);
+    vec3 result = vec3(0.0f);
+    //result += CalcDirLight();
     
-    for(int i = 0; i < numPointLights; i++) {
+    for(int i = 0; i < 3; i++) {
         result += CalcPointLight(pointLights[i]);
     }
 
@@ -212,29 +203,6 @@ void main()
     #endif
 
     Output = vec4(result, 1.0f);
-//
-////    for(int i = 0; i < NR_POINT_LIGHTS; i++)
-////    {
-////        result += CalcPointLight(pointLights[i]);
-////    }
-//
-//
-////    result += CalcSpotLight(spotLight);
-//
-//        float width = 800, 
-//          height = 600;
-//
-//    vec4 coord = gl_FragCoord;
-//
-//    float x = coord.x / width;
-//    float y = coord.y / height;
-//    
-//    float xDiff = (x - 0.5f); 
-//    float yDiff = (y - 0.5f);
-//    float avgDiff = (abs(xDiff) + abs(yDiff));
-
-
-//    gl_FragColor = vec4(result, 1.0f);
 }
 
 vec3 GetNormal() {

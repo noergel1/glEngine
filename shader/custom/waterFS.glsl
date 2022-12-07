@@ -74,7 +74,6 @@ vec3 CalcReflectionRefraction()
     moveFactor = moveFactor - floor(moveFactor);
 
     vec2 ndc = fs_in.ClipSpace.xy / fs_in.ClipSpace.w; 
-    //ndc = (ndc + 1.0)/2.0;
     ndc = (ndc/2.0f)+0.5f;
     vec2 reflectTexCoords = vec2(ndc.x, 1.0f-ndc.y);
     vec2 refractTexCoords = vec2(ndc.x, ndc.y);
@@ -108,23 +107,3 @@ vec3 CalcDirLight()
     vec3 specular = dirSpecular * spec * texColorSpecular;
     return (ambient + diffuse + specular);
 }  
-//vec3 generateWaveSineSumImprovedNormal(sinParams _params[sineCount])
-//{
-//        vec2 pos = vec2(aPos.x, aPos.z);
-//        vec3 normal = vec3(0.0f, 1.0f, 0.0f);
-//
-//        for(int i=0; i<sineCount; i++)
-//        {
-//            sinParams curParams = _params[i];
-//            normal.x += sineExponent * curParams.direction.x * curParams.frequency * curParams.amplitude * 
-//                        pow((sin(dot(curParams.direction, pos) * curParams.frequency + curTime * curParams.speed)+1)/2, sineExponent-1)
-//                        * cos(dot(curParams.direction, pos) * curParams.frequency + curTime * curParams.speed);
-//
-//            normal.z += sineExponent * curParams.direction.y * curParams.frequency * curParams.amplitude * 
-//                        pow((sin(dot(curParams.direction, pos) * curParams.frequency + curTime * curParams.speed)+1)/2, sineExponent-1)
-//                        * cos(dot(curParams.direction, pos) * curParams.frequency + curTime * curParams.speed);
-//        }
-//
-//        return vec3(-normal.x, normal.y, -normal.z);
-//
-//}

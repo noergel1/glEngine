@@ -15,19 +15,13 @@ RessourceManager::RessourceManager()
 }
 
 	const unsigned int RessourceManager::IGetShader( unsigned int _diffuseCount, bool _specular = false, bool _ambient = false, bool _emissive = false, bool _height = false, bool _normal = false, unsigned int _vertexFormat = 1 ) {
-
-		//#define CHECK_BIT(var,pos) ((var) & (1<<(pos)))
-		//std::cout << CHECK_BIT( 15, 0 ) << "\n";
-		//std::cout << CHECK_BIT( 15, 1 ) << "\n";
-		//std::cout << CHECK_BIT( 15, 2 ) << "\n";
-		//std::cout << CHECK_BIT( 15, 3 ) << "\n";
-
 		// create look-up string
 		std::string shaderStr = "";
 		shaderStr += std::to_string( _vertexFormat ) + "_";
 		if (_diffuseCount > 0) shaderStr += std::to_string(_diffuseCount) + "D_";
 		else {
 			std::cout << "Tried creating shader without diffuse maps!\n";
+			return 0;
 		}
 		if (_specular) shaderStr += "S_";
 		if (_ambient) shaderStr += "A_";
